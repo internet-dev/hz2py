@@ -7,10 +7,12 @@ php 汉转拼音扩展,支持转全拼与简拼
 $src    = '一个重庆人,走在银行门前的人行道上.';
 //$result;
 //$polyphone = array();
+
 $ret = hz2py_jp($src, $result, $polyphone);
 var_dump($result);
 var_dump($polyphone);
 var_dump($ret);
+
 $ret = hz2py_qp($src, $result, $polyphone);
 var_dump($result);
 var_dump($polyphone);
@@ -19,7 +21,7 @@ var_dump($ret);
 
 输出结果
 
-```
+```json
 string(18) "ygzqr,zzyhmqdrhds."
 array(2) {
   ["重"]=>
