@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("hz2py", "for hz2py support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("hz2py", "enable hz2py support", "no");
+
+if (PHP_HZ2PY != "no") {
+	EXTENSION("hz2py", "hz2py.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
